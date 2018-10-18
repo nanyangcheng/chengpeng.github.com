@@ -4,5 +4,5 @@
   <center>
  
  <center>
-  [LAB-1:基本信号演示]<img src="https://github.com/nanyangcheng/chengpeng.github.com/blob/master/lab-1.md" > 
+  [TOC][LAB-1:基本信号演示]<img src="https://github.com/nanyangcheng/chengpeng.github.com/blob/master/lab-1.md" > 
   <center>  
