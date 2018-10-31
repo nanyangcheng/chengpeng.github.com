@@ -16,9 +16,32 @@
 <hr />
 <img src="psb (4).jpg" />
 <br />
-<h3>信号与系统用python画图范例</h3>
-<p>Figure_1</p>
-<a href="F:\nit\chengpeng.github.io\Untitled-1.py">图形python代码</a>
+<h2>信号与系统用python画图范例</h2>
+<h3>Figure_1</h3>
+<hr />
 <img src="Figure_1.png"/>
+<a href="F:\nit\chengpeng.github.io\Untitled-1.py">图形python代码</a>
+<h3>Figure_1python代码</h3>
+<hr />
+<p>
+        import matplotlib.pyplot as plt<br />
+        import numpy as np <br />
+        # linspace 第一个参数序列起始值, 第二个参数序列结束值,第三个参数为样本数默认50<br />
+        x = np.linspace(0, 3 * np.pi, 100)<br />
+        y = np.sin(x)<br />
+        plt.rcParams['font.sans-serif']=['SimHei'] #加上这一句就能在图表中显示中文<br />
+        plt.rcParams['axes.unicode_minus']=False #用来正常显示负号<br />
+        plt.subplot(1,2,1)<br />
+        plt.title(r'$f(x)=sin(x)$') <br />
+        plt.plot(x, y)<br />
+        #plt.show()<br />
+        x1 = [t*0.375*np.pi for t in x]<br />
+        y1 = np.sin(x1)<br />
+        plt.subplot(1,2,2)<br />
+        # plt.title(u"测试2") #注意：在前面加一个u<br />
+        plt.title(r'$f(x)=sin(\omega x), \omega = \frac{3}{8} \pi$') <br />
+        plt.plot(x1, y1)<br />
+        plt.show() <br />
+        </p>
 </body>
 </html>
