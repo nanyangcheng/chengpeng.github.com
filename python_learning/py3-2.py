@@ -13,3 +13,5 @@ print(mdd)
 mdd.sort()
 print(mdd)
 print(len(mdd))
+for value in range(1,6):
+    print=(value)
