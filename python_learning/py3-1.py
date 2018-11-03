@@ -1,12 +1,20 @@
-usernames = ['eric', 'willie', 'admin', 'erin', 'ever']
+people={'first_name':'cheng',
+        'last_name':'peng',
+        'age':20,
+        'city':'ningbo',}
+lists={'s':0,
+    'k':9,
+    'l':8,}
+favorite_language={'jen':['python','c','f'],
+    'sarah':['d','f','f'],
+    'edward':['ruby'],
+    'phil':['python','d',],
+    }
+favorite_language['cheng']='r'
 
-for username in usernames:
-    if username == 'admin':
-        print("Hello admin, would you like to see a status report?")
-    else:
-        print("Hello " + username + ", thank you for logging in again!")
+for xf in favorite_language.keys():
+    for h in favorite_language[xf]:
+        print(xf.title()+" favorite "+h)
+    
 
-if username:
-    print("d")
-else:
-    print("dfd")
+
