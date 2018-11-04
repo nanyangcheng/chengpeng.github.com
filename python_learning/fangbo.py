@@ -7,6 +7,5 @@ for i in x:
         y.append(-1)
     else:
         y.append(1)
-
 plt.plot(x,y)
 plt.show()

@@ -1,5 +1,5 @@
 <html>
-    <head><title>Cheng Peng</title>>
+    <head><title>single and system</title>>
         <style type="text/css">
         body{
         background-color: #8cb6d2;
@@ -44,6 +44,25 @@
         plt.plot(x1, y1)<br />
         plt.show() <br />
  </code>
+</li>
+<li><h3>基本方波图形</h3>
+    <p>
+        <img src="photos_big/fangbo.png"></a>
+    </p>
+    <h4>python代码</h4>
+    <code>
+            import matplotlib.pyplot as plt<br/>
+            import numpy as np<br/>
+            x=np.linspace(-10,10,300)<br/>
+            y=[]<br/>
+            for i in x:<br/>
+                if np.sin(i)>0:<br/>
+                    y.append(-1)<br/>
+                else:<br/>
+                    y.append(1)<br/>
+            plt.plot(x,y)<br/>
+            plt.show()<br/>
+    </code>
 </li>
 </ol>
     </p>
