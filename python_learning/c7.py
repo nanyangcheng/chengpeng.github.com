@@ -13,5 +13,6 @@ for i in x:
     y_1=fangbo(i)
     y.append(y_1)
 
+y=np.array(y)
 plt.plot(x,y)
 plt.show()
