@@ -18,7 +18,17 @@
       You'll find us right in the center of downtown Webville.   
       If you need help finding us, check out our<a href="about\directions.html"> detailed directions</a>.
       Come join us!
+      <img id="img" onmouseover="bigger()" onmouseout="smaller()" src=src="images/drinks.gif" style="width:100px;height:100px;" />
+
+      <script type="text/javascript"> 
       
+      var img = document.getElementById('img'); 
+      
+      function bigger(){  img.style.width = '400px';  img.style.height = '400px'; } 
+      
+      function smaller(){  img.style.width = '100px';  img.style.height = '100px'; }
+      
+      </script> 
     </p>
   </body>
   <a href="../../../index.html" target="_blank">Back</a>
