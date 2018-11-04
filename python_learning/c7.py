@@ -1,8 +1,12 @@
-def build_person(first_name,last_name,age=""):
-    person={'first':'first_name','last':'last_name'}
-    if age:
-        person['age']=age
-    return person
+import matplotlib.pyplot as plt
+import numpy as np
+def fangbo(t):
+    if t > 0:
+        return 1
+    else:
+        return -1
 
-m=build_person('f','d',19)
-print(m)
+x=np.linspace(-10,10,300)
+y=fangbo(x)
+plt.plot(x,y)
+plt.show()
