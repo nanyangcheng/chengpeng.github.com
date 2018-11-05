@@ -56,28 +56,3 @@ class Privileges():
     def show_Privileges(self):
         for privilege in self.privileges:
             print(privilege)
-
-
-
-
-
-
-a = Admin('cheng','peng','male')
-a.privilges.privileges = ['can do a','ni az djf']
-a.privilges.show_Privileges()
-a.describle_user()
-print("\n")
-big_onr = Icecreamstand('The big One')
-big_onr.flavors=['a','a','d','t']
-big_onr.show_flowers()
-big_onr.describle_restaruant()           
-peo = User('cheng','peng','male')
-res = Restaurant('cheng','peng')
-peo.describle_user()
-print(res.number_served)
-res.increment(100)
-res.increment(100)
-res.ser_number_served(10)
-print(res.number_served)
-print(res.curisine_type+res.restaruant_name)
-res.describle_restaruant()
