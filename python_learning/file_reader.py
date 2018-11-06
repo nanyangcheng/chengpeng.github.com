@@ -1,4 +1,5 @@
-with open('pi_digits.txt') as file_object:
-    contents = file_object.read()
+
+with open('python_learning\pi_digits.txt') as file_object:
+    for line in file_object:
+        print(line)
     
-print(contents) 
