@@ -1,5 +1,6 @@
 
-with open('python_learning\pi_digits.txt') as file_object:
-    for line in file_object:
-        print(line)
+print("please input your name:/n")
+a = input()
+with open('python_learning\pi_digits.txt','a') as file_object:
+    file_object.write(a)
     
