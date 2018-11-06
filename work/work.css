@@ -21,3 +21,14 @@ code{
 h2{font-size: 120%;
     font-weight: bold;
 }
+
+#dabiaoti{
+    border-collapse: white;
+    border-width: 1px;
+    border-style: outset;
+    padding: 25px;
+    padding-left: 80px;
+    margin-top: 5%;
+    background-image: url(photos_big/Figure_1.png);
+    
+}
