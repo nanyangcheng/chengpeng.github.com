@@ -11,11 +11,15 @@ h1{border-bottom: 1px solid black;
         font-size: 200%;
     }
 
-code{
+p {
        font-family: serif;
        font-size:80%;
-   }
+       line-height: 150%;
+       border-style:solid;
+       width:700px;
+       float: right;
+       margin-top: 55px;
+       border-color: #8cb6d2;
+    }
 
-#show {
-
-}
+ 

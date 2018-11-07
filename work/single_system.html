@@ -10,12 +10,8 @@
 <h1 align="center">信号与系统用python画图范例</h1>
 <div id="show">
 <ol>
-<li><h3>Figure_1</h3>
-<a href="bigo_photos_html/Figure_1.html" target="_blank">    <!--target_blank 单独打开一个页面-->
-    <img src="photos_mini/Figure_1.jpg" title="点击图片放大"/>
-</a>
-<h4>Figure_1python代码</h4>
-   <code>
+<li>
+   <p>
         import matplotlib.pyplot as plt<br />
         import numpy as np <br />
         # linspace 第一个参数序列起始值, 第二个参数序列结束值,第三个参数为样本数默认50<br />
@@ -34,12 +30,12 @@
         plt.title(r'$f(x)=sin(\omega x), \omega = \frac{3}{8} \pi$') <br />
         plt.plot(x1, y1)<br />
         plt.show() <br />
- </code>
+   </p>
+   <h3>Figure_1</h3>
+    <img src="photos_big/Figure_1.png">
 </li>
-<li><h3>基本方波图形</h3>
-        <img src="photos_big/fangbo.png"></a>
-    <h4>python代码</h4>
-    <code>
+<li>
+    <p>
             import matplotlib.pyplot as plt<br/>
             import numpy as np<br/>
             x=np.linspace(-10,10,300)<br/>
@@ -51,7 +47,9 @@
                     y.append(1)<br/>
             plt.plot(x,y)<br/>
             plt.show()<br/>
-    </code>
+    </p>
+    <h3>基本方波图形</h3>
+    <img src="photos_big/fangbo.png">
 </li>
 </ol>
 </div>
