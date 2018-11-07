@@ -1,16 +1,17 @@
-class User():
+import json
 
-    def __init__(self,a,b,c):
-        self.a = a
-        self.b = b
-        self.c = c 
+filename = 'numbername.json'
 
-    def user_discrible(self):
-        print(self.a+self.b+" is "+self.c)
+def shuru(a):
+    filename = 'numbername.json'
+    with open(filename,'w') as obj_f:
+        json.dump(a,obj_f)
 
-    def greet_user(self):
-        print("Hellow "+self.a+self.b)
+def shuchu():
+    filename = 'numbername.json'
+    with open(filename) as obj_f:
+        r = json.load(obj_f)
+        print(r) 
 
-my = User('cheng','peng','male')
-my.user_discrible
-my.greet_user
+shuru(input())
+shuchu()
