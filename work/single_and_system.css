@@ -17,9 +17,17 @@ p {
        line-height: 150%;
        border-style:solid;
        width:700px;
-       float: right;
-       margin-top: 55px;
        border-color: #8cb6d2;
     }
+
+img {
+    width: 700px;
+    float: right;
+}
+
+li {
+    margin-bottom: 150px;
+    border-bottom-color: black;
+}
 
  
