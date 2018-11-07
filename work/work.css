@@ -24,9 +24,11 @@ h2{font-size: 120%;
 #dabiaoti{
     border-collapse: black;
     border-width: 1px;
-   
     padding: 25px;
     padding-left: 80px;
-    margin-top: 40%;
-    
+    margin-top: 40%;   
+}
+
+#dabiaoti a:link {
+    color: black;
 }
