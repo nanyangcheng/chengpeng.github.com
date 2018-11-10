@@ -1,6 +1,9 @@
-import numpy as np
-from scipy.io import wavfile
-import matplotlib.pylab as plt
-
-sampling_freq.audio = wavefile.read('work\ch.wav')
-print('\nShape:', audio.shape)
+import sys
+from PyQt5 import QtWidgets
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    w = QtWidgets.QWidget()
+    w.resize(400, 200)
+    w.setWindowTitle("hello PyQt5")
+    w.show()
+    exit(app.exec_())
