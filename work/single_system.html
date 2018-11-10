@@ -73,10 +73,25 @@
        import matplotlib.pyplot as plt</br>
        import numpy as np</br>
        k = np.linspace(-30,30,60)</br>
-       a_k1 = np.sin(2*k*np.pi*(1/4))/(np.pi*k)</br>
+       a_k1 = np.sin(2*k*np.pi*(1/8))/(np.pi*k)</br>
        plt.scatter(k,a_k1,s=10)</br>
        plt.xticks((-30,-20,-10,0,10,20,30))</br>
        plt.title('$a_k=\\frac{\sin(2k*\pi*\\frac{T_1}{T})}{\pi*k},T=8T_1$'</br>
+       ,fontsize=19)</br>
+       plt.show()</br>
+    </p>
+</li>
+<li>
+<h3>周期方波傅立叶级数系数的图示C.</h3>
+   <img src="photos_big\T=T_16.png">
+    <p>
+       import matplotlib.pyplot as plt</br>
+       import numpy as np</br>
+       k = np.linspace(-30,30,60)</br>
+       a_k1 = np.sin(2*k*np.pi*(1/16))/(np.pi*k)</br>
+       plt.scatter(k,a_k1,s=10)</br>
+       plt.xticks((-30,-20,-10,0,10,20,30))</br>
+       plt.title('$a_k=\\frac{\sin(2k*\pi*\\frac{T_1}{T})}{\pi*k},T=16T_1$'</br>
        ,fontsize=19)</br>
        plt.show()</br>
     </p>
