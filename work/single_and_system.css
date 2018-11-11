@@ -30,4 +30,9 @@ li {
     border-bottom-color: black;
 }
 
- 
+h1{
+    background-image: url(photos_big/snake-300.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-bottom: 200px;
+}
