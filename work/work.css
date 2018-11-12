@@ -29,11 +29,10 @@ h2{font-size: 120%;
     margin-top: 40%;   
 }
 
-#dabiaoti a:link {
-    color: black;
-}
-
 a:link{
     color: black;
 }
 
+a:hover{
+    color: black;
+}
