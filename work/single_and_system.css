@@ -22,8 +22,8 @@ p {
 
 #snake{
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 10px;
+    right: -18px;
 }
 #snake a,img{
     border: none;
