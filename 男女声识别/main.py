@@ -11,9 +11,8 @@ from pylab import *
 
 wave = thinkdsp.read_wave('sheng.wav')
 spectrum = wave.make_spectrum()
-spectrum.low_pass(cutoff=600,factor=0.01)
-wave = spectrum.make_wave()
-wave.write(filename='wave')
-thinkdsp.play_wave(filename='wave',player='groove')
-wave.play('wave')
+plt.figure(figsize=(15,6))
+plt.axis([0,2000,0,2500])
+spectrum.plot()
+thinkplot.show()
 
