@@ -72,22 +72,39 @@
 <div id="tableRow2">
 <li>
 <div id="two">
-<h3>基本周期方波图形</h3>
+<h3>具有初始相位的正弦信号</h3>
     <p>
-            import matplotlib.pyplot as plt<br/>
-            import numpy as np<br/>
-            x=np.linspace(-10,10,300)<br/>
-            y=[]<br/>
-            for i in x:<br/>
-                if np.sin(i)>0:<br/>
-                    y.append(-1)<br/>
-                else:<br/>
-                    y.append(1)<br/>
-            plt.plot(x,y)<br/>
-            plt.show()<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        t = np.arange(-10,10,0.1)<br/>
+        y = np.cos(t-1)<br/>
+        
+        plt.title(r'$x(t)=A\cos(wt+\phi)$',fontsize=16)<br/>
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        plt.ylim(-2,2)<br/>
+        plt.text(-2.5,np.cos(-1),r'$A\cos\phi$',fontdict={'size':14})<br/>
+        plt.text(0,-0.15,'O',fontdict={'size':14})<br/>
+        plt.text(0.15,1.90,'x(t)',fontdict={'size':14})<br/>
+        plt.text(11,-0.15,'t',fontdict={'size':14})<br/>
+        plt.text(1.2,0.96,'<-------------->',fontdict={'size':14})<br/>
+        plt.text(np.pi,1.1,r'$T_0=\frac{2\pi}{\omega_0}$',fontdict={'size':14})<br/>
+          
+        dy = 0.4<br/>
+        plt.errorbar(1,1,yerr=dy,fmt='o')<br/>
+        plt.errorbar(1+2*np.pi,1,yerr=dy,fmt='o')<br/>
+
+        plt.plot(t,y)<br/> 
+        plt.show()<br/>                                        
     </p>
 </div>   
-<div id="T2"><img src="photos_big/fangbo.png"></div>
+<div id="T2"><img src="../信号与系统/图像/图1-12.png"></div>
 </li>
 </div>
 
