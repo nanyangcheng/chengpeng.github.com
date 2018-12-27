@@ -23,29 +23,49 @@
 <div id="tableRow1">
 <li>
 <div id="one">
-<h3>Figure_1</h3>
-   <p>
-        import matplotlib.pyplot as plt<br />
-        import numpy as np <br />
-        # linspace 第一个参数序列起始值, 第二个参数序列结束值,第三个参数为样本数默认50<br />
-        x = np.linspace(0, 3 * np.pi, 100)<br />
-        y = np.sin(x)<br />
-        plt.rcParams['font.sans-serif']=['SimHei'] #加上这一句就能在图表中显示中文<br />
-        plt.rcParams['axes.unicode_minus']=False #用来正常显示负号<br />
-        plt.subplot(1,2,1)<br />
-        plt.title(r'$f(x)=sin(x)$') <br />
-        plt.plot(x, y)<br />
-        #plt.show()<br />
-        x1 = [t*0.375*np.pi for t in x]<br />
-        y1 = np.sin(x1)<br />
-        plt.subplot(1,2,2)<br />
-        # plt.title(u"测试2") #注意：在前面加一个u<br />
-        plt.title(r'$f(x)=sin(\omega x), \omega = \frac{3}{8} \pi$') <br />
-        plt.plot(x1, y1)<br />
-        plt.show() <br />
+<h3>连续时间实指数信号</h3>
+    <p>
+       import numpy as np <br/>
+       import matplotlib as mpl<br/>
+       import matplotlib.pyplot as plt<br/>
+       import mpl_toolkits.axisartist as axisartist<br/>
+  
+       fig = plt.figure()<br/>
+       ax = axisartist.Subplot(fig, 111) <br/> 
+       fig.add_axes(ax)<br/>
+       ax.axis[:].set_visible(False)<br/>
+       ax.axis["x"] = ax.new_floating_axis(0,-0.8)<br/>
+       ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+       ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+       ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+       ax.axis["x"].set_axis_direction("top")<br/>
+       ax.axis["y"].set_axis_direction("right") <br/>
+       
+       t = np.arange(-5,5,0.1)<br/>
+       s = 0.5<br/>
+       y = np.e**(s*t)<br/>
+       s = -0.5<br/>
+       y_1 = np.e**(s*t)<br/>
+       s = 0<br/>
+       y_2 = np.e**(s*t)<br/>
+       
+       plt.title(r'$x(t)=Ce^{st},s=\sigma+jw_0$')<br/>
+       plt.xticks([])<br/>
+       plt.yticks([])<br/>
+       plt.ylim(-0.8,10)<br/>
+       plt.text(0,-1.2,'0',fontdict={'size':16})<br/>
+       plt.text(5.5,-1.2,'t',fontdict={'size':16})<br/>
+       plt.text(4,7,r'$\sigma>0$',fontdict={'size':16})<br/>
+       plt.text(-5.5,7,r'$\sigma<0$',fontdict={'size':16})<br/>
+       plt.text(0,1.5,'C',fontdict={'size':16})<br/>
+       
+       plt.plot(t,y)<br/>
+       plt.plot(t,y_1)<br/>
+       plt.plot(t,y_2)<br/>
+       plt.show()<br/>
    </p>
    </div>
-   <div id="T1"><img src="photos_big/Figure_1.png"></div>
+   <div id="T1"><img src="../信号与系统/图像/图1-11.png"></div>
 </li>
 </div>
 
