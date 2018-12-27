@@ -3,7 +3,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
 
-fig = plt.figure(figsize=(8,8))
+fig = plt.figure()
 ax = axisartist.Subplot(fig, 111)  
 fig.add_axes(ax)
 ax.axis[:].set_visible(False)
@@ -29,7 +29,7 @@ plt.ylim(-0.8,10)
 plt.text(0,-1.2,'0',fontdict={'size':16})
 plt.text(5.5,-1.2,'t',fontdict={'size':16})
 plt.text(4,7,r'$\sigma>0$',fontdict={'size':16})
-plt.text(-5,7,r'$\sigma<0$',fontdict={'size':16})
+plt.text(-5.5,7,r'$\sigma<0$',fontdict={'size':16})
 plt.text(0,1.5,'C',fontdict={'size':16})
 
 plt.plot(t,y)
