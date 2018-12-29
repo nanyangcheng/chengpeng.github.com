@@ -5,7 +5,6 @@ import mpl_toolkits.axisartist as axisartist
 
 fig = plt.figure(figsize=(6,6))
 
-
 ax = axisartist.Subplot(fig, 111)  
 fig.add_axes(ax)
 ax.axis[:].set_visible(False)
@@ -19,6 +18,11 @@ ax.axis["y"].set_axis_direction("right")
 t = np.arange(-10,10,0.1)
 y=-1*(t<0)+1*(t>=0)
 
+plt.text(0,-0.08,'O',fontdict={'size':16})
+plt.text(2,0.01,r'$\omega$',fontdict={'size':16})
+plt.text(0,1,'sgn(t)',fontdict={'size':16})
+plt.xticks([])
+plt.yticks([])
 plt.xlim(-2,2)
 plt.ylim(-2,1)
 plt.plot(t,np.fft.fft(y))

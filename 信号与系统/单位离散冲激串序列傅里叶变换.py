@@ -15,29 +15,15 @@ ax.axis["y"].set_axisline_style("-|>", size = 1.0)
 ax.axis["x"].set_axis_direction("top")
 ax.axis["y"].set_axis_direction("right")
 
-n = list(np.arange(-5,7,1))
-
-for i in n:
-	if i>=0 :
-		y = i
-		plt.scatter(i,y,color='black')
-	else:
-		y = 0
-		plt.scatter(i,y,color='black')
-		
-for i in n:
-	if i >= 0 :
-		plt.plot([i,i],[0,i],color='black',linewidth=1.5)
+n = np.arange(-10,11,1)
+y = n*0*(n<0)+n*1*(n>=0)
 
 plt.xticks([])
 plt.yticks([])
 
 plt.text(0.2,-0.3,'O',fontdict={'size':16})
-plt.text(1,-0.3,'1')
-plt.text(2,-0.3,'2')
-plt.text(3,-0.3,'3')
-plt.text(0,7,'r[n]',fontdict={'size':16})
-plt.text(7,-0.05,'n',fontdict={'size':16})
-plt.text(7,3.5,'....',fontdict={'size':16})
+plt.text(0,60,'r[n]',fontdict={'size':16})
+plt.text(10,-0.05,r'$\omega_0$',fontdict={'size':16})
 
+plt.scatter(n,np.fft.fft(y),color='black')
 plt.show()

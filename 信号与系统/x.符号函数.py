@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
 
 fig = plt.figure(figsize=(6,6))
-
-
 ax = axisartist.Subplot(fig, 111)  
 fig.add_axes(ax)
 ax.axis[:].set_visible(False)

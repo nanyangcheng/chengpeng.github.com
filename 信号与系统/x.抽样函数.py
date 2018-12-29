@@ -26,3 +26,4 @@ plt.xticks([])
 plt.yticks([])
 plt.plot(t,y)
 plt.show()
+

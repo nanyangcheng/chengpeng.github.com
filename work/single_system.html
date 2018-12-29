@@ -311,11 +311,477 @@
         plt.show()<br/>
     </p>
 </div>
-<div id="T5"><img src="../信号与系统/图像/"></div>
+<div id="T5"><img src="../信号与系统/图像/图1-17.png"></div>
+</li>
+</div>
+
+<div id="tableRow6">
+    <li>
+    <div id="six">
+    <h3>延迟的单位阶跃信号等及傅里叶变换</h3>
+    <p>
+            import numpy as np<br/>
+            import pandas as pd<br/>
+            import matplotlib.pyplot as plt<br/>
+            import matplotlib <br/>
+            font = {'family':'SimHei'}<br/>                
+            matplotlib.rc('font',**font) <br/>             
+            matplotlib.rcParams['axes.unicode_minus']=False<br/>
+            fig = plt.figure()<br/>
+            plt.subplot(1,2,1)<br/>
+            ax = plt.gca() <br/> 
+            ax.spines['right'].set_color('none') <br/> 
+            ax.spines['top'].set_color('none') <br/> 
+            ax.xaxis.set_ticks_position('bottom') <br/> 
+            ax.spines['bottom'].set_position(('data', 0))  <br/>
+            ax.yaxis.set_ticks_position('left')  <br/>
+            ax.spines['left'].set_position(('data', 0)) <br/>
+            t = np.arange(-10,10,0.1)<br/>
+            y=0*(t<0)+1*(t>=0)<br/>
+            plt.text(0,-0.08,'O',fontdict={'size':16})<br/>
+            plt.text(10,-0.08,'t',fontdict={'size':16})<br/>
+            plt.text(0,1.5,'u(t)',fontdict={'size':16})<br/>
+            plt.xticks([])<br/>
+            plt.yticks([])<br/>
+            plt.ylim(0,1.5)<br/>
+            plt.plot(t,y)<br/>
+            plt.subplot(1,2,2)<br/>
+            ax = plt.gca()  <br/>
+            ax.spines['right'].set_color('none')  <br/>
+            ax.spines['top'].set_color('none')  <br/>
+            ax.xaxis.set_ticks_position('bottom')  <br/>
+            ax.spines['bottom'].set_position(('data', -0.5))  <br/>
+            ax.yaxis.set_ticks_position('left')  <br/>
+            ax.spines['left'].set_position(('data', 0))<br/>
+            plt.xticks([])<br/>
+            plt.yticks([])<br/>
+            plt.text(0,-0.5,'O',fontdict={'size':16})<br/>
+            plt.text(0.75,-0.5,r'$\omega$',fontdict={'size':16})<br/>
+            plt.text(0,1,'u(t)',fontdict={'size':16})<br/>
+            t = np.arange(-1,1,0.1)<br/>
+            y=0*(t<0)+1*(t>=0)<br/>
+            plt.xlim(-0.75,0.75)<br/>
+            plt.ylim(-2,1)<br/>
+            plt.plot(t,np.fft.fft(y))<br/>           
+            plt.show()<br/>
+    </p>
+</div>
+<div id="T6"><img src="../信号与系统/图像/图1-19.png"></div>
 </li>
 </div>
 
 
+<div id="tableRow7">
+    <li>
+    <div id="seven">
+    <h3>符号函数及其傅里叶变换</h3>
+        <p>
+                import numpy as np <br/>
+                import matplotlib as mpl
+                import matplotlib.pyplot as plt<br/>
+                import mpl_toolkits.axisartist as axisartist<br/>
+                fig = plt.figure(figsize=(6,6))<br/>
+                ax = axisartist.Subplot(fig, 111)  <br/>
+                fig.add_axes(ax)<br/>
+                ax.axis[:].set_visible(False)
+                ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+                ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+                ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+                ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+                ax.axis["x"].set_axis_direction("top")<br/>
+                ax.axis["y"].set_axis_direction("right")<br/>
+                t = np.arange(-10,10,0.1)<br/>
+                y=-1*(t<0)+1*(t>=0)<br/>           
+                plt.text(0,-0.08,'O',fontdict={'size':16})<br/>
+                plt.text(11,-0.15,'t',fontdict={'size':16})<br/>
+                plt.text(0,1.5,'sgn(t)',fontdict={'size':16})<br/>
+                plt.xticks([])<br/>
+                plt.yticks([])<br/>
+                plt.ylim(-1.5,1.5)<br/>
+                plt.plot(t,y)<br/>
+                plt.show()<br/>
+                          <br/>
+                fig = plt.figure(figsize=(6,6))<br/>
+                ax = axisartist.Subplot(fig, 111) <br/> 
+                fig.add_axes(ax)<br/>
+                ax.axis[:].set_visible(False)<br/>
+                ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+                ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+                ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+                ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+                ax.axis["x"].set_axis_direction("top")<br/>
+                ax.axis["y"].set_axis_direction("right")<br/>
+                t = np.arange(-10,10,0.1)<br/>
+                y=-1*(t<0)+1*(t>=0)<br/>             
+                plt.text(0,-0.08,'O',fontdict={'size':16})<br/>
+                plt.text(2,0.01,r'$\omega$',fontdict={'size':16})<br/>
+                plt.text(0,1,'sgn(t)',fontdict={'size':16})<br/>
+                plt.xticks([])<br/>
+                plt.yticks([])<br/>
+                plt.xlim(-2,2)<br/>
+                plt.ylim(-2,1)<br/>
+                plt.plot(t,np.fft.fft(y))<br/>
+                plt.show()<br/>
+        </p>
+    </div>
+    <div id="T7"><img src="../信号与系统/图像/图1-23.png">
+        <img src="../信号与系统/图像/图1-23f.png"></div>
+    </li>
+    </div>
+
+    <div id="tableRow8">
+        <li>
+        <div id="eight">
+        <h3>冲激信号</h3>
+            <p>
+                import numpy as np <br/>
+                import matplotlib as mpl<br/>
+                import matplotlib.pyplot as plt<br/>
+                import mpl_toolkits.axisartist as axisartist<br/>
+                
+                fig = plt.figure(figsize=(6,6))<br/>
+                
+                ax = axisartist.Subplot(fig, 111)  <br/>
+                fig.add_axes(ax)<br/>
+                ax.axis[:].set_visible(False)<br/>
+                ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+                ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+                ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+                ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+                ax.axis["x"].set_axis_direction("top")<br/>
+                ax.axis["y"].set_axis_direction("right")<br/>
+                
+                n = 0<br/>
+                
+                plt.xticks([])<br/>
+                plt.yticks([])<br/>
+                plt.ylim(0,2)<br/>
+                plt.text(0,-0.05,'O',fontdict={'size':16})<br/>
+                plt.text(0.001,0.99,'1',fontdict={'size':16})<br/>
+                plt.text(0.055,-0.1,r'$\omega$',fontdict={'size':16})<br/>
+                plt.text(0,2,r'$\delta[n]$',fontdict={'size':16})<br/>
+                plt.text(10,-0.05,'n',fontdict={'size':16})<br/>
+                plt.text(-0.0021,0.95,'^',fontdict={'size':16})<br/>
+                plt.plot([n,n],[0,1],color='black')<br/>
+                plt.show()<br/>
+            </p>
+        </div>
+        <div id="T8"><img src="../信号与系统/图像/图1-26.png"></div>
+        </li>
+        </div>
+
+
+ <div id="tableRow9">
+ <li>
+ <div id="nine">
+ <h3>抽样函数及其傅里叶变换</h3>
+     <p>
+        import numpy as np <br/>
+        import matplotlib as mpl<br/>
+        import matplotlib.pyplot as plt<br/>
+        import mpl_toolkits.axisartist as axisartist<br/>
+        
+        fig = plt.figure(figsize=(6,6))<br/>
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        t = np.arange(-16,16,0.1)<br/>
+        y = np.sin(t)/t<br/>
+        
+        plt.title(r'$Sa(t)=\frac{\sin(t)}{t}$',fontsize=14)<br/>
+        plt.text(0,-0.06,'O',fontdict={'size':16})<br/>
+        plt.text(16.5,-0.06,'t',fontdict={'size':14})<br/>
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        plt.plot(t,y)<br/>
+        plt.show()<br/>
+        <br/>
+        fig = plt.figure(figsize=(6,6))<br/>
+
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        t = np.arange(-11,11,0.1)<br/>
+        y = np.sin(t)/t<br/>
+        
+        plt.title(r'$Sa(t)=\frac{\sin(t)}{t}$',fontsize=14)<br/>
+        plt.text(0,-0.06,'O',fontdict={'size':16})<br/>
+        plt.text(11,-2,r'$\omega_0$',fontdict={'size':14})<br/>
+        
+        plt.plot(t,np.fft.fft(y))<br/>
+        plt.show()<br/>
+     </p>
+ </div>
+ <div id="T9"><img src="../信号与系统/图像/图1-31.png">
+    <img src="../信号与系统/图像/图1-31f.png">
+</div>
+ </li>
+ </div>
+
+<div id="tableRow10">
+    <li>
+    <div id="ten">
+    <h3>离散单位脉冲序列</h3>
+    <p>
+        import numpy as np <br/>
+        import matplotlib as mpl<br/>
+        import matplotlib.pyplot as plt<br/>
+        import mpl_toolkits.axisartist as axisartist<br/>
+        
+        fig = plt.figure(figsize=(6,6))<br/>
+        
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        n = np.arange(-10,10)<br/>
+        y = 1*(n==0)<br/>
+        
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        plt.text(0,-0.05,'O',fontdict={'size':16})<br/>
+        plt.text(0.2,0.99,'1',fontdict={'size':16})<br/>
+        plt.text(0,1.1,r'$\delta[n]$',fontdict={'size':16})<br/>
+        plt.text(10,-0.05,'n',fontdict={'size':16})<br/>
+        plt.scatter(n,y,color='black')<br/>
+        plt.show()<br/>
+    </p>
+</div>
+<div id="T10"><img src="../信号与系统/图像/图1-34.png"></div>
+</li>
+</div>
+
+<div id="tableRow11">
+    <li>
+    <div id="eleven">
+    <h3>u[n]信号</h3>
+    <p>
+        import numpy as np <br/>
+        import matplotlib as mpl<br/>
+        import matplotlib.pyplot as plt<br/>
+        import mpl_toolkits.axisartist as axisartist<br/>
+        
+        fig = plt.figure(figsize=(6,6))<br/>
+        
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        n = np.arange(-5,5)<br/>
+        y = 1*(n>=0)<br/>
+        plt.scatter(n,y,color='black')<br/>
+        
+        for i in n:<br/>
+        	if i >= 0:<br/>
+        		plt.plot([i,i],[0,1],color='black',linewidth=1.5)<br/>
+        		
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        plt.text(0,-0.05,'O',fontdict={'size':16})<br/>
+        plt.text(0.2,0.99,'1',fontdict={'size':16})<br/>
+        plt.text(0,1.1,'u[n]',fontdict={'size':16})<br/>
+        plt.text(5,-0.05,'n',fontdict={'size':16})<br/>
+        plt.text(4.5,0.5,'....',fontdict={'size':16})<br/>
+        		
+        plt.show()<br/>
+    </p>
+</div>
+<div id="T11"><img src="../信号与系统/图像/图1-36.png"></div>
+</li>
+</div>
+
+<div id="tableRow12">
+    <li>
+    <div id="twelve">
+    <h3>矩形序列G_N[n]</h3>
+    <p>
+        import numpy as np <br/>
+        import matplotlib as mpl<br/>
+        import matplotlib.pyplot as plt<br/>
+        import mpl_toolkits.axisartist as axisartist<br/>
+        
+        fig = plt.figure(figsize=(6,6))<br/>
+        
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        N = 5<br/>
+        n = list(np.arange(-5,7,1))<br/>
+        
+        for i in n:<br/>
+            if i>=0 and i<N :<br/>
+                y = 1<br/>
+                plt.scatter(i,y,color='black')<br/>
+            else:<br/>
+                y = 0<br/>
+                plt.scatter(i,y,color='black')<br/>
+                
+        for i in n:<br/>
+            if i >= 0 and i<N:<br/>
+                plt.plot([i,i],[0,1],color='black',linewidth=1.5)<br/>
+        
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        plt.ylim(-0.06,2)<br/>
+        plt.text(0,-0.09,'O',fontdict={'size':16})<br/>
+        plt.text(0.2,0.99,'1',fontdict={'size':16})<br/>
+        plt.text(0,2,r'$G_N[n]$',fontdict={'size':16})<br/>
+        plt.text(7,-0.05,'n',fontdict={'size':16})<br/>
+        plt.text(3.6,-0.09,'N-1',fontdict={'size':16})<br/>
+        plt.show()<br/>
+   </p>
+</div>
+<div id="T12"><img src="../信号与系统/图像/图1-38.png"></div>
+</li>
+</div>
+
+<div id="tableRow13">
+    <li>
+    <div id="thirteen">
+    <h3>单位斜坡序列r[n]的波形及其傅里叶变换，单位离散冲激串序列</h3>
+    <p>
+        import numpy as np <br/>
+        import matplotlib as mpl<br/>
+        import matplotlib.pyplot as plt<br/>
+        import mpl_toolkits.axisartist as axisartist<br/>
+        
+        fig = plt.figure(figsize=(6,6))<br/>
+        
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        n = list(np.arange(-5,7,1))<br/>
+        
+        for i in n:<br/>
+        	if i>=0 :<br/>
+        		y = i<br/>
+        		plt.scatter(i,y,color='black')<br/>
+        	else:<br/>
+        		y = 0<br/>
+        		plt.scatter(i,y,color='black')<br/>
+        		
+        for i in n:<br/>
+        	if i >= 0 :<br/>
+        		plt.plot([i,i],[0,i],color='black',linewidth=1.5)<br/>
+        
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        
+        plt.text(0.2,-0.3,'O',fontdict={'size':16})<br/>
+        plt.text(1,-0.3,'1')<br/>
+        plt.text(2,-0.3,'2')<br/>
+        plt.text(3,-0.3,'3')<br/>
+        plt.text(0,7,'r[n]',fontdict={'size':16})<br/>
+        plt.text(7,-0.05,'n',fontdict={'size':16})<br/>
+        plt.text(7,3.5,'....',fontdict={'size':16})<br/>
+        
+        plt.show()<br/>
+        <br/>
+        fig = plt.figure(figsize=(6,6))<br/>
+
+        ax = axisartist.Subplot(fig, 111)  <br/>
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        n = np.arange(-10,11,1)<br/>
+        y = n*0*(n<0)+n*1*(n>=0)<br/>
+        
+        plt.xticks([])<br/>
+        plt.yticks([])<br/>
+        
+        plt.text(0.2,-0.3,'O',fontdict={'size':16})<br/>
+        plt.text(0,60,'r[n]',fontdict={'size':16})<br/>
+        plt.text(10,-0.05,r'$\omega_0$',fontdict={'size':16})<br/>
+        
+        plt.scatter(n,np.fft.fft(y),color='black')<br/>
+        plt.show()<br/>
+        <br/>
+        fig = plt.figure(figsize=(6,6))<br/>
+
+        ax = axisartist.Subplot(fig, 111) <br/> 
+        fig.add_axes(ax)<br/>
+        ax.axis[:].set_visible(False)<br/>
+        ax.axis["x"] = ax.new_floating_axis(0,0)<br/>
+        ax.axis["x"].set_axisline_style("->", size = 1.0)<br/>
+        ax.axis["y"] = ax.new_floating_axis(1,0)<br/>
+        ax.axis["y"].set_axisline_style("-|>", size = 1.0)<br/>
+        ax.axis["x"].set_axis_direction("top")<br/>
+        ax.axis["y"].set_axis_direction("right")<br/>
+        
+        n = list(np.arange(-3,4,1))<br/>
+        y = list(np.ones(7,dtype=int))<br/>
+        plt.scatter(n,y,color='black')<br/>
+        
+        for i in n:<br/>
+        		plt.plot([i,i],[0,1],color='black',linewidth=1.5)<br/>
+        		
+        plt.text(0.1,-0.1,'O',fontdict={'size':16})<br/>
+        plt.xticks([-3,-2,-1,1,2,3],[r'$-3N$',r'$-2N$',r'$-N$',r'$N$',r'$2N$',r'$3N$'])<br/>
+        plt.text(3.1,0.5,'...',fontdict={'size':16})<br/>
+        plt.text(-3.3,0.5,'...',fontdict={'size':16})<br/>
+        plt.text(0.1,1.6,r'$\delta_N[n]$',fontdict={'size':16})<br/>
+        plt.ylim(-0.4,1.5)<br/>
+        plt.yticks([])<br/>
+         
+        plt.show()<br/>
+   </p>
+</div>
+<div id="T13"><img src="../信号与系统/图像/图1-39.png">
+    <img src="../信号与系统/图像/图1-39f.png">
+    <img src="../信号与系统/图像/图1-40.png">
+</div>
+</li>
+</div>
+
+
+
+        
 </ol>
 </div>
 
