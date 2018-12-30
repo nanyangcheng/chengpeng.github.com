@@ -3,7 +3,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
 
-plt.figure(figsize=(14,14))
+plt.figure()
 
 plt.subplot(3,2,1)
 ax = plt.gca()  

@@ -3,9 +3,9 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
 
-plt.figure(figsize=(20,6))
+plt.figure()
 
-plt.subplot(1,3,1)
+plt.subplot(3,1,1)
 ax = plt.gca()  
 ax.spines['right'].set_color('none')  
 ax.spines['top'].set_color('none')  
@@ -16,7 +16,7 @@ ax.spines['left'].set_color('none')
 plt.xticks([])
 plt.yticks([])
 plt.text(40,0.05,'.......',fontdict={'size':16})
-plt.text(41,-0.07,'n',fontdict={'size':14})
+plt.text(41,-0.3,'n',fontdict={'size':14})
 
 n = np.arange(0,40,0.5)
 y = np.cos(2*np.pi*n/12)
@@ -28,7 +28,7 @@ for i in n:
 plt.title(r'$x[n]=\cos(2 \pi n /12)$')
 
 
-plt.subplot(1,3,2)
+plt.subplot(3,1,2)
 ax = plt.gca()  
 ax.spines['right'].set_color('none')  
 ax.spines['top'].set_color('none')  
@@ -39,7 +39,7 @@ ax.spines['left'].set_color('none')
 plt.xticks([])
 plt.yticks([])
 plt.text(40,0.05,'.......',fontdict={'size':16})
-plt.text(41,-0.07,'n',fontdict={'size':14})
+plt.text(41,-0.3,'n',fontdict={'size':14})
 
 n = np.arange(0,40,0.5)
 y = np.cos(8*np.pi*n/31)
@@ -51,7 +51,7 @@ for i in n:
 plt.title(r'x[n]=$\cos(8 \pi n /31)$')
 
 
-plt.subplot(1,3,3)
+plt.subplot(3,1,3)
 ax = plt.gca()  
 ax.spines['right'].set_color('none')  
 ax.spines['top'].set_color('none')  
@@ -62,9 +62,9 @@ ax.spines['left'].set_color('none')
 plt.xticks([])
 plt.yticks([])
 plt.text(40,0.05,'.......',fontdict={'size':16})
-plt.text(41,-0.07,'n',fontdict={'size':14})
+plt.text(41,-0.3,'n',fontdict={'size':14})
 
-n = np.arange(0,40,0.5)
+n = np.arange(0,40,1)
 y = np.cos(n/6)
 plt.scatter(n,y,color='black')
 

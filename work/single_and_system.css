@@ -103,6 +103,14 @@ p {
     display: table-cell;
     vertical-align: top;
 }
+#fifteen{
+    display: table-cell;
+    vertical-align: top;
+}
+#sixteen{
+    display: table-cell;
+    vertical-align: top;
+}
 #T1{
     display:table-cell;
     vertical-align: top;
@@ -156,6 +164,14 @@ p {
     vertical-align: top;
 }
 #T14{
+    display:table-cell;
+    vertical-align: top;
+}
+#T15{
+    display:table-cell;
+    vertical-align: top;
+}
+#T16{
     display:table-cell;
     vertical-align: top;
 }
