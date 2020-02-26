@@ -1,35 +1,5 @@
-import wave
-import struct
-import numpy as np
-import pylab as pl
-from scipy import *
-from pylab import *
- 
-
-filename = 'boy.wav'
-wavefile = wave.open(filename, 'r') 
-
-nchannels = wavefile.getnchannels()
-sample_width = wavefile.getsampwidth()
-framerate = wavefile.getframerate() 
-numframes = wavefile.getnframes()
- 
-print("channel",nchannels)
-print("sample_width",sample_width)
-print("framerate",framerate)
-print("numframes",numframes)
- 
-y = zeros(numframes)
- 
-for i in range(numframes):
-    val = wavefile.readframes(1)
-    left = val[0:2]
-
-    v = struct.unpack('h', left )[0]
-    y[i] = v
- 
-
-
-Fs = framerate
-specgram(y, NFFT=1024, Fs=Fs, noverlap=900)
-show()
+a =12820511125800480418509823377584493313483757113921041036386863979947667
+b =19003745709252896455259157889281438796593582149888968164158437578007547
+c=40752920094571430738175034630839041512042242495566158200935379236509563
+d=a^b%c
+print(d)
